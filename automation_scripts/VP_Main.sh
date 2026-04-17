@@ -11,4 +11,4 @@ echo 'VP_Main.sh' $r $s $c $index $args
 this_date=$s
 if (( $index > 0 )); then this_date=$(date -d "$s + $index day" +'%Y%m%d'); fi
 echo 'about to run vp_extraction' $r $this_date
-python ../workflow_scripts/vp_extraction.py -r $r -t $this_date -c $c $args
+python ./workflow_scripts/vp_extraction.py -r $r -t $this_date -c $c $args
