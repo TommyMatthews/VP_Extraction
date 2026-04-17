@@ -22,6 +22,7 @@ Authors:
 from __future__ import (absolute_import, division, print_function)
 #from six.moves import (filter, input, map, range, zip)
 
+
 import sys
 import os
 import glob
@@ -32,6 +33,8 @@ import numpy as np
 from dateutil.parser import parse as dateparse
 import h5py as h5
 from netCDF4 import num2date
+
+sys.path.append('./')
 
 from VP import vp_functions
 from VP.aux_io import read_nimrod_aggregated_odim_h5
