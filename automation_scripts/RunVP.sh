@@ -81,6 +81,7 @@ cat > vp_slurm.sb <<-EOF
 #SBATCH --output=Output/${r}_%j-%A_%a.out       # Standard output and error log
 #SBATCH --array=0-$Max_iter              # Array range
 
+source activate VP_env
 source ./automation_scripts/VP_Main.sh ${r} ${s} ${c} \$SLURM_ARRAY_TASK_ID 
 EOF
 
