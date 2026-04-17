@@ -34,14 +34,14 @@ from dateutil.parser import parse as dateparse
 import h5py as h5
 from netCDF4 import num2date
 
-sys.path.append('./')
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from .VP import vp_functions
-from .VP.aux_io import read_nimrod_aggregated_odim_h5
-from .VP.aux_io import read_file
-from .VP.vp import VerticalProfile
-from .VP import read_config
-from .VP import vp_grid_functions
+from VP import vp_functions
+from VP.aux_io import read_nimrod_aggregated_odim_h5
+from VP.aux_io import read_file
+from VP.vp import VerticalProfile
+from VP import read_config
+from VP import vp_grid_functions
 
 def parse_args():
     formatter = argparse.RawDescriptionHelpFormatter
