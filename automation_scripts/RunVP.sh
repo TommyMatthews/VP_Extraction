@@ -80,8 +80,8 @@ cat > vp_slurm.sb <<-EOF
 #SBATCH --time=4:00:00             # Time limit per array task hrs:min:sec
 #SBATCH --output=Output/${r}_%j-%A_%a.out       # Standard output and error log
 #SBATCH --array=0-$Max_iter              # Array range
-#SBATCH --mem 50
-source ./VP_Main.sh ${r} ${s} ${c} \$SLURM_ARRAY_TASK_ID 
+
+source ../automation_scripts/VP_Main.sh ${r} ${s} ${c} \$SLURM_ARRAY_TASK_ID 
 EOF
 
 echo "running batch script for ${r}, ${s}, ${c} ${Max_iter} days."
