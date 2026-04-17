@@ -39,7 +39,7 @@ from VP import vp_functions
 from VP.aux_io import vp_io
 from VP.vp import VerticalProfile
 from VP import read_config
-from VP vp_grid_functions
+from VP import vp_grid_functions
 
 
 def parse_args():
